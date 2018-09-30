@@ -1,3 +1,32 @@
 body {
-  background: green;
+  background-color: #FAFAFA;
+}
+
+.Header {
+  background-color: #EAEAEA;
+}
+
+.Footer {
+  background-color: #EAEAEA;
+}
+
+.Main {
+  display: flex;
+}
+
+.StockChoices {
+  width: 200px;
+}
+
+.Button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  border: 0;
+  outline: 0;
+  margin: 2px;
+}
+
+.Button--active {
+  background-color: green;
 }
