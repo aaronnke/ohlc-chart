@@ -9,7 +9,8 @@
     ]
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "NODE_ENV='production' webpack"
   },
   "author": "aaronnke@gmail.com",
   "license": "MIT",
