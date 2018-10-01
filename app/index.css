@@ -1,32 +1,73 @@
 body {
   background-color: #FAFAFA;
+  margin: 2px;
+  height: calc(100vh - 2px - 2px);
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+
+.App {
+  height: 100%;
 }
 
 .Header {
-  background-color: #EAEAEA;
+  background-color: #5D4037;
+  height: 50px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  color: #FFFFFF;
 }
 
 .Footer {
-  background-color: #EAEAEA;
+  background-color: #212121;
+  color: #FFFFFF;
+  display: flex;
+  height: 40px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  padding-left: 24px;
+  align-items: center;
 }
 
 .Main {
   display: flex;
+  height: calc(100% - 50px - 40px);
+  align-items: center;
 }
 
 .StockChoices {
   width: 200px;
+  height: 100%;
 }
 
 .Button {
   display: block;
   width: 100%;
-  height: 32px;
+  height: calc(100% / 11);
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.38);
   border: 0;
   outline: 0;
-  margin: 2px;
+  background-color: #E8F5E9;
+  border: 1px solid #FFFFFF;
+  text-align: left;
+  padding-left: 24px;
+  cursor: pointer;
 }
 
 .Button--active {
-  background-color: green;
+  background-color: #C8E6C9;
+}
+
+.CanvasContainer {
+  width: 100%;
+  display: flex;
+}
+
+.Canvas {
+  margin: 0 auto;
 }

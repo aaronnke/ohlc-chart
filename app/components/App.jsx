@@ -2,8 +2,9 @@ import React, { Component, Fragment } from 'react';
 import getOHLCData from '../utils/api';
 import Button from './Button';
 
-const CANVAS_WIDTH = 640;
-const CANVAS_HEIGHT = 640;
+// width of viewport - padding - buttons width
+const CANVAS_WIDTH = window.innerWidth - (30 * 2) - 200;
+const CANVAS_HEIGHT = 480;
 const PADDING = 12;
 
 class Chart extends Component {
@@ -39,7 +40,7 @@ class Chart extends Component {
       const fullData = res.data['Time Series (Daily)'];
       const data = Object.keys(fullData).map(key => (
         fullData[key]
-      )).slice(0, 30).reverse();
+      )).slice(0, 50).reverse();
       this.drawChart(data);
     });
   }
@@ -53,7 +54,7 @@ class Chart extends Component {
       const fullData = res.data['Time Series (Daily)'];
       const data = Object.keys(fullData).map(key => (
         fullData[key]
-      )).slice(0, 30).reverse();
+      )).slice(0, 50).reverse();
       this.drawChart(data);
     });
   }
@@ -155,7 +156,9 @@ class Chart extends Component {
               />
             ))}
           </div>
-          <canvas ref={this.canvas} width={CANVAS_WIDTH} height={CANVAS_HEIGHT} />
+          <div className="CanvasContainer">
+            <canvas ref={this.canvas} className="Canvas" width={CANVAS_WIDTH} height={CANVAS_HEIGHT} />
+          </div>
         </div>
         <div className="Footer">a footer</div>
       </Fragment>
