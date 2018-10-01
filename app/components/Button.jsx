@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Button extends Component {
   constructor(props) {
@@ -12,12 +13,17 @@ class Button extends Component {
   }
 
   render() {
-    const { value, activeValue } = this.props;
-    const isActive = value === activeValue;
+    const { value, isActive } = this.props;
     return (
       <button className={`Button${isActive ? ' Button--active' : ''}`} type="button" onClick={this.handleClick}>{value}</button>
     );
   }
 }
+
+Button.propTypes = {
+  value: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
+};
 
 export default Button;
